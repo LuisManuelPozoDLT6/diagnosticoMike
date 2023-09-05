@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Diagnóstico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .btn-circle {
+            width: 18px !important;
+            height: 18px !important;
+            padding: 1px 0px !important;
+            border-radius: 15px !important;
+            text-align: center !important;
+            font-size: 10px !important;
+        }
+        .contenedor {
+            max-height: 95%;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="m-0 vh-100 row justify-content-center align-items-center">
+                    <form id="create-form">
+                        <input class="form-control" type="text" id="id" hidden>
+                        <label style="margin-bottom: 5px;" class="col-form-label">Nombre</label>
+                        <input class="form-control" type="text" id="name" required>
+                        <label class="col-form-label">Puesto</label>
+                        <input class="form-control" type="text" id="job" required>
+                        <button class="btn btn-primary mt-3" type="submit" id="btnCreate"  >Registrar</button>
+                        <button class="btn btn-warning mt-3" style="visibility: hidden;" id="btnUpdate" type="submit" >Modificar</button>
+                        <button class="btn btn-danger mt-3" onclick="cancel()" style="visibility: hidden;" id="btnCancel" type="submit" >Cancelar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="vh-100 row justify-content-center align-items-center">
+                    <div class="card contenedor">
+                        <div class="card-body" >
+                            <div class="row" id="users">
+                            
+                            </div>
+                        </div>
+                      </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./index.js"></script>
+    
+    
+
+</body>
+</html>
